@@ -1,4 +1,4 @@
-/* reset leve do css */
+//* reset leve do css */
 
 *{
     margin:0;
@@ -61,10 +61,10 @@ a:hover{
 /*se a tela tiver pelo menos 400px vai carregar estes estilos */  
 
 @media (min-width: 400px) {
-    body {font-size: 14px;}
+    body{font-size: 14px;}
    }
 @media (min-width: 550px) {
-    body {font-size: 18px;}
+    body{font-size: 18px;}
    }
 .portifolio{
      color:white;
@@ -89,22 +89,24 @@ figcaption{
 .portifolio .grid{
    display: grid;
    gap: 2em;
-   grid-template-columns: 240px 240px;
+   grid-template-columns: 240px;
 }
 .portifolio figure {
     text-align: center;
 }
-@media (min-width: 400px){
+@media (min-width: 560px){
     .portifolio .grid{
       grid-template-columns: 240px 240px;}  
 }
-@media (min-width: 880px){
+@media (min-width: 900px){
     .portifolio .grid{
       grid-template-columns: 240px 240px 240px;
     justify-content: center;}  
 }
-@media(min-width: 880px){
-    .portifolio h2{
-        text-align: center;
-        margin-bottom: 2em;}
+@media(min-width: 900px){
+    .portifolio h2{text-align: center;margin-bottom: 2em;}
 }
+@media (max-width: 560px){
+    .portifolio .grid{
+      grid-template-columns:  240px;}  
+    }
