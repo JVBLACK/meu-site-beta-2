@@ -37,6 +37,7 @@ a:hover{
     position:fixed;
     width:100vw;
     top:0;
+    z-index:1;
 }
 .subtitle{
     text-align:center;
@@ -52,7 +53,8 @@ a:hover{
 }
 .menu a{
     padding:10px 20px;
-    display:block
+    display:block;
+    transition: background-color 1s,color 1s;
 }
 .img-portfolio{
     height:180px;
@@ -60,6 +62,10 @@ a:hover{
     object-fit: cover;
     object-position:  bottom;
     border-radius: 5%;
+    transition: transform 300ms
+}
+.img-portfolio:hover {
+    transform: scale(1.2)
 }
 /*se a tela tiver pelo menos 400px vai carregar estes estilos */  
 
@@ -72,10 +78,11 @@ a:hover{
 @media (min-width: 900px) {
     body{font-size: 22px;}
 }
+.contato,
 .portifolio{
      color:white;
      padding: 2em;
-     height: 60vh; 
+     min-height: 100vh; 
     }
 li{
     list-style: none;
@@ -84,6 +91,7 @@ li{
 figcaption{
     color:white
 }
+.contato h2,
 .portifolio h2{
     font-family: 'Viga', sans-serif;
     color:whitesmoke;
@@ -132,3 +140,40 @@ header .subtitle{font-size: 16px;}
 @media (min-width: 900px) {
     header .subtitle{font-size: 26px;}
 }
+.contato a {
+    color: whitesmoke;
+    font-size: 8em;
+    transition: text-shadow 300ms;
+}
+.contato a:active,
+.contato a:hover{
+    text-decoration:none;
+    text-shadow: 0px 0px 10px rgba(255,255,255,0.7);
+}
+.contato .icons{
+    text-align: center;
+}
+.menu a:hover {
+    background-color: teal;
+    color:white;
+}
+.titulo{
+     transform: scale(0.2) translateY(50vh);
+     opacity: 0;
+     animation: linear 2s  animacaoTitulo forwards;
+
+}
+.titulo:hover{
+    transform: scale(0) translateY(0);
+    opacity: 1;
+}
+@keyframes animacaoTitulo {
+    
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+} 
+
+
+
